@@ -31,7 +31,7 @@ def kyounounsei():
   kitisouko = ("アルティメット大吉","ウルトラ大吉","ハイパー大吉","スーパー大吉","大吉")
   print("今日の{}さんの運勢は{}です".format(jibunname,kitisouko[score]))
 #-------------------------------------------------------ここまで準備
-print("これから占いをするよ\n今日の相性占いがしたかったら相性占い\n今日の運勢占いがしたかったら今日の占いって入力してね")
+print("これから占いをするよ\n今日の相性占いがしたかったらa\n今日の運勢占いがしたかったらbを入力してね")
 nyuryoku = input()
 if nyuryoku == "a":#これは相性
   kyounoaisyou()
@@ -39,5 +39,5 @@ elif nyuryoku == "b":
   kyounounsei()
 r = requests.get("https://opentdb.com/api.php?amount=1&category=27&difficulty=medium&type=boolean")
 data = r.json()
-print("今日のトリビア")
-print(data['results'][0]["question"],"\n",data['results'][0]["correct_answer"])
+print("今日のクイズ")
+print(data['results'][0]["question"]+"?\n"+data['results'][0]["correct_answer"])
